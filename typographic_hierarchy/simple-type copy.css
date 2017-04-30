@@ -46,8 +46,28 @@ section {
 ul{
   display: none;
   font-family: 'Roboto Slab', serif;
+  font-size: 1em;
+}
+
+a{
+  line-height: 1.2em;
+}
+
+.fixed{
+  position:fixed;
   max-height: 100%;
-  font-size: .8em;
+  max-height: 100%;
+  overflow: scroll;
+}
+
+.absolute{
+  position: absolute;
+  
+}
+
+.relative{
+  position: relative;
+  z-index: 9;
 }
 
 
@@ -89,6 +109,69 @@ ul{
 .col-11,
 .col-12 { width: 100%;}
 
+    header ul {
+        background-color: lightgray;
+        display: none;
+        list-style: none;
+        margin: 0;
+        padding: 0 0 60px 0;
+        border-top:1px solid #505050;
+        bottom: 0;
+        width: 100%;
+    }
+
+    header ul li {
+        border-bottom: 1px solid #505050;
+    }
+
+    header ul li a {
+        display: block;
+        color: #505050;
+        padding: 5px;
+        text-decoration: none;
+        transition: all 500ms;
+    }
+
+    header ul li a:hover {
+        background: #505050;
+        color: lightgray;
+        text-decoration: none;
+    }
+
+    header button.toggle {
+        background: lightgray;
+        border: 1px solid #505050;
+        box-shadow: 0 3px 3px rgba(0,0,0,.2);
+        display: block;
+        height: 50px;
+        margin: 0;
+        padding: 0;
+        width: 50px;
+        /**/
+        position: relative;
+        z-index: 200;
+    }
+
+    header button.toggle:focus,
+    header button.toggle:active {
+      outline: 0;
+    }
+    header button.toggle span {
+        background: #505050;
+        display: block;
+        height: 4px;
+        margin: 5px;
+    }
+
+    header button.toggle:active {
+        background: #505050;
+        box-shadow: inset 0 3px 3px rgba(0,0,0,.2);
+    }
+
+    header button.toggle:active span {
+        background: lightgray;
+    }
+
 
 
 
@@ -106,8 +189,6 @@ ul{
   margin: 0px;
   box-sizing: border-box;
     }
-
-
 
 ul {
   display: none;
@@ -177,10 +258,15 @@ ul {
 
 @media (min-width: 900px) {
 
-    body {
+body {
   margin: 0px;
   box-sizing: border-box;
     }
+
+
+a{
+  line-height: .4em;
+}
 
 ul {
   display: block;
@@ -190,6 +276,8 @@ ul {
   padding: 0;
   background-color: #fff;
   position: fixed;
+  font-family: 'Roboto Slab', serif;
+  font-size: .6em;
     }
 
 
@@ -234,6 +322,41 @@ ul li a:hover {
         color:  #CCCCCC;
     }
 
+/**/
+
+header 
+
+header ul {
+    display: block;
+    position: static;
+    max-height: 100vh;
+}
+
+header button.toggle { display: none; }
+
+header {
+    top:0;
+    bottom:initial;
+    border: none;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+header nav ul li {
+    float: left;
+    border: none;
+}
+
+header nav ul li a {
+    padding: 15px;
+}
+
+/**/
 
   h1 {
     font-size: 3em;
